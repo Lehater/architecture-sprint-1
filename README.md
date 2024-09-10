@@ -38,45 +38,6 @@
      - `Main.js` — компонент основной страницы, который отображает карточки.
      - `PopupWithForm.js` — компонент, предоставляющий общий интерфейс для различных форм.
    
-### Запуск
-
-Для запуска каждого микрофронтенда используется Webpack и Webpack Module Federation. Каждая часть проекта запускается отдельно на своем порту, а основное приложение загружает микрофронтенды динамически.
-
-#### Шаги для запуска:
-
-1. Установите зависимости в каждом микрофронтенде:
-   ```bash
-   npm install
-
-2. Запустите каждый микрофронтенд:
-
-- Auth:
-   ```bash
-    cd frontend/microfrontend/auth
-    npm run start
-    # Запускается на http://localhost:3001
-
-
-- Profile:
-   ```bash
-    cd frontend/microfrontend/profile
-    npm run start
-    # Запускается на http://localhost:3002
-
-
-- Gallery:
-   ```bash
-    cd frontend/microfrontend/gallery
-    npm run start
-    # Запускается на http://localhost:3003
-
-- Main (основное приложение):
-   ```bash
-    cd frontend/microfrontend/main
-    npm run start
-    # Запускается на http://localhost:3000
-
-3. Основное приложение будет доступно по адресу http://localhost:3000 и автоматически загрузит все микрофронтенды.
 
 ### Обоснование выбора подхода
 Для интеграции микрофронтендов в основной проект был выбран подход Webpack Module Federation. Основные причины выбора:
